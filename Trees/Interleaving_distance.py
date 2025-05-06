@@ -854,11 +854,8 @@ def interleaving(T_0,T_1, binary = False, approx = 'up', MP = False,
                  check=False,verbose = False):
 
     """
-    approx = up -> upper bound
-    approx = down -> lower bound
-    approx = middle -> deletion con #Lambda=1 contraggo solo (x,father(x))
-    
-    check = serve per vedere se l'upper bound sulle deletion con #Lambda=0 é esatto o meno
+    approx -> returns the upper bound if equal to 'up', returns the lower bound if equal to 'low'
+    MP -> if equal to 'True', uses multiprocessing
     """
     
     global T_build
